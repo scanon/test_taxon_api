@@ -37,14 +37,14 @@ def get_config():
     retconfig = {}
     config = ConfigParser()
     config.read(get_config_file())
-    for nameval in config.items(get_service_name() or 'test_taxon_api'):
+    for nameval in config.items(get_service_name() or 'TestTaxonAPI'):
         retconfig[nameval[0]] = nameval[1]
     return retconfig
 
 config = get_config()
 
-from test_taxon_api.test_taxon_apiImpl import test_taxon_api
-impl_test_taxon_api = test_taxon_api(config)
+from TestTaxonAPI.TestTaxonAPIImpl import TestTaxonAPI
+impl_TestTaxonAPI = TestTaxonAPI(config)
 
 
 class JSONObjectEncoder(json.JSONEncoder):
@@ -61,54 +61,54 @@ class JSONObjectEncoder(json.JSONEncoder):
 sync_methods = {}
 async_run_methods = {}
 async_check_methods = {}
-async_run_methods['test_taxon_api.get_parent_async'] = ['test_taxon_api', 'get_parent']
-async_check_methods['test_taxon_api.get_parent_check'] = ['test_taxon_api', 'get_parent']
-sync_methods['test_taxon_api.get_parent'] = True
-async_run_methods['test_taxon_api.get_children_async'] = ['test_taxon_api', 'get_children']
-async_check_methods['test_taxon_api.get_children_check'] = ['test_taxon_api', 'get_children']
-sync_methods['test_taxon_api.get_children'] = True
-async_run_methods['test_taxon_api.get_genome_annotations_async'] = ['test_taxon_api', 'get_genome_annotations']
-async_check_methods['test_taxon_api.get_genome_annotations_check'] = ['test_taxon_api', 'get_genome_annotations']
-sync_methods['test_taxon_api.get_genome_annotations'] = True
-async_run_methods['test_taxon_api.get_scientific_lineage_async'] = ['test_taxon_api', 'get_scientific_lineage']
-async_check_methods['test_taxon_api.get_scientific_lineage_check'] = ['test_taxon_api', 'get_scientific_lineage']
-sync_methods['test_taxon_api.get_scientific_lineage'] = True
-async_run_methods['test_taxon_api.get_scientific_name_async'] = ['test_taxon_api', 'get_scientific_name']
-async_check_methods['test_taxon_api.get_scientific_name_check'] = ['test_taxon_api', 'get_scientific_name']
-sync_methods['test_taxon_api.get_scientific_name'] = True
-async_run_methods['test_taxon_api.get_taxonomic_id_async'] = ['test_taxon_api', 'get_taxonomic_id']
-async_check_methods['test_taxon_api.get_taxonomic_id_check'] = ['test_taxon_api', 'get_taxonomic_id']
-sync_methods['test_taxon_api.get_taxonomic_id'] = True
-async_run_methods['test_taxon_api.get_kingdom_async'] = ['test_taxon_api', 'get_kingdom']
-async_check_methods['test_taxon_api.get_kingdom_check'] = ['test_taxon_api', 'get_kingdom']
-sync_methods['test_taxon_api.get_kingdom'] = True
-async_run_methods['test_taxon_api.get_domain_async'] = ['test_taxon_api', 'get_domain']
-async_check_methods['test_taxon_api.get_domain_check'] = ['test_taxon_api', 'get_domain']
-sync_methods['test_taxon_api.get_domain'] = True
-async_run_methods['test_taxon_api.get_genetic_code_async'] = ['test_taxon_api', 'get_genetic_code']
-async_check_methods['test_taxon_api.get_genetic_code_check'] = ['test_taxon_api', 'get_genetic_code']
-sync_methods['test_taxon_api.get_genetic_code'] = True
-async_run_methods['test_taxon_api.get_aliases_async'] = ['test_taxon_api', 'get_aliases']
-async_check_methods['test_taxon_api.get_aliases_check'] = ['test_taxon_api', 'get_aliases']
-sync_methods['test_taxon_api.get_aliases'] = True
-async_run_methods['test_taxon_api.get_info_async'] = ['test_taxon_api', 'get_info']
-async_check_methods['test_taxon_api.get_info_check'] = ['test_taxon_api', 'get_info']
-sync_methods['test_taxon_api.get_info'] = True
-async_run_methods['test_taxon_api.get_history_async'] = ['test_taxon_api', 'get_history']
-async_check_methods['test_taxon_api.get_history_check'] = ['test_taxon_api', 'get_history']
-sync_methods['test_taxon_api.get_history'] = True
-async_run_methods['test_taxon_api.get_provenance_async'] = ['test_taxon_api', 'get_provenance']
-async_check_methods['test_taxon_api.get_provenance_check'] = ['test_taxon_api', 'get_provenance']
-sync_methods['test_taxon_api.get_provenance'] = True
-async_run_methods['test_taxon_api.get_id_async'] = ['test_taxon_api', 'get_id']
-async_check_methods['test_taxon_api.get_id_check'] = ['test_taxon_api', 'get_id']
-sync_methods['test_taxon_api.get_id'] = True
-async_run_methods['test_taxon_api.get_name_async'] = ['test_taxon_api', 'get_name']
-async_check_methods['test_taxon_api.get_name_check'] = ['test_taxon_api', 'get_name']
-sync_methods['test_taxon_api.get_name'] = True
-async_run_methods['test_taxon_api.get_version_async'] = ['test_taxon_api', 'get_version']
-async_check_methods['test_taxon_api.get_version_check'] = ['test_taxon_api', 'get_version']
-sync_methods['test_taxon_api.get_version'] = True
+async_run_methods['TestTaxonAPI.get_parent_async'] = ['TestTaxonAPI', 'get_parent']
+async_check_methods['TestTaxonAPI.get_parent_check'] = ['TestTaxonAPI', 'get_parent']
+sync_methods['TestTaxonAPI.get_parent'] = True
+async_run_methods['TestTaxonAPI.get_children_async'] = ['TestTaxonAPI', 'get_children']
+async_check_methods['TestTaxonAPI.get_children_check'] = ['TestTaxonAPI', 'get_children']
+sync_methods['TestTaxonAPI.get_children'] = True
+async_run_methods['TestTaxonAPI.get_genome_annotations_async'] = ['TestTaxonAPI', 'get_genome_annotations']
+async_check_methods['TestTaxonAPI.get_genome_annotations_check'] = ['TestTaxonAPI', 'get_genome_annotations']
+sync_methods['TestTaxonAPI.get_genome_annotations'] = True
+async_run_methods['TestTaxonAPI.get_scientific_lineage_async'] = ['TestTaxonAPI', 'get_scientific_lineage']
+async_check_methods['TestTaxonAPI.get_scientific_lineage_check'] = ['TestTaxonAPI', 'get_scientific_lineage']
+sync_methods['TestTaxonAPI.get_scientific_lineage'] = True
+async_run_methods['TestTaxonAPI.get_scientific_name_async'] = ['TestTaxonAPI', 'get_scientific_name']
+async_check_methods['TestTaxonAPI.get_scientific_name_check'] = ['TestTaxonAPI', 'get_scientific_name']
+sync_methods['TestTaxonAPI.get_scientific_name'] = True
+async_run_methods['TestTaxonAPI.get_taxonomic_id_async'] = ['TestTaxonAPI', 'get_taxonomic_id']
+async_check_methods['TestTaxonAPI.get_taxonomic_id_check'] = ['TestTaxonAPI', 'get_taxonomic_id']
+sync_methods['TestTaxonAPI.get_taxonomic_id'] = True
+async_run_methods['TestTaxonAPI.get_kingdom_async'] = ['TestTaxonAPI', 'get_kingdom']
+async_check_methods['TestTaxonAPI.get_kingdom_check'] = ['TestTaxonAPI', 'get_kingdom']
+sync_methods['TestTaxonAPI.get_kingdom'] = True
+async_run_methods['TestTaxonAPI.get_domain_async'] = ['TestTaxonAPI', 'get_domain']
+async_check_methods['TestTaxonAPI.get_domain_check'] = ['TestTaxonAPI', 'get_domain']
+sync_methods['TestTaxonAPI.get_domain'] = True
+async_run_methods['TestTaxonAPI.get_genetic_code_async'] = ['TestTaxonAPI', 'get_genetic_code']
+async_check_methods['TestTaxonAPI.get_genetic_code_check'] = ['TestTaxonAPI', 'get_genetic_code']
+sync_methods['TestTaxonAPI.get_genetic_code'] = True
+async_run_methods['TestTaxonAPI.get_aliases_async'] = ['TestTaxonAPI', 'get_aliases']
+async_check_methods['TestTaxonAPI.get_aliases_check'] = ['TestTaxonAPI', 'get_aliases']
+sync_methods['TestTaxonAPI.get_aliases'] = True
+async_run_methods['TestTaxonAPI.get_info_async'] = ['TestTaxonAPI', 'get_info']
+async_check_methods['TestTaxonAPI.get_info_check'] = ['TestTaxonAPI', 'get_info']
+sync_methods['TestTaxonAPI.get_info'] = True
+async_run_methods['TestTaxonAPI.get_history_async'] = ['TestTaxonAPI', 'get_history']
+async_check_methods['TestTaxonAPI.get_history_check'] = ['TestTaxonAPI', 'get_history']
+sync_methods['TestTaxonAPI.get_history'] = True
+async_run_methods['TestTaxonAPI.get_provenance_async'] = ['TestTaxonAPI', 'get_provenance']
+async_check_methods['TestTaxonAPI.get_provenance_check'] = ['TestTaxonAPI', 'get_provenance']
+sync_methods['TestTaxonAPI.get_provenance'] = True
+async_run_methods['TestTaxonAPI.get_id_async'] = ['TestTaxonAPI', 'get_id']
+async_check_methods['TestTaxonAPI.get_id_check'] = ['TestTaxonAPI', 'get_id']
+sync_methods['TestTaxonAPI.get_id'] = True
+async_run_methods['TestTaxonAPI.get_name_async'] = ['TestTaxonAPI', 'get_name']
+async_check_methods['TestTaxonAPI.get_name_check'] = ['TestTaxonAPI', 'get_name']
+sync_methods['TestTaxonAPI.get_name'] = True
+async_run_methods['TestTaxonAPI.get_version_async'] = ['TestTaxonAPI', 'get_version']
+async_check_methods['TestTaxonAPI.get_version_check'] = ['TestTaxonAPI', 'get_version']
+sync_methods['TestTaxonAPI.get_version'] = True
 
 class AsyncJobServiceClient(object):
 
@@ -369,7 +369,7 @@ class Application(object):
                                    context['method'], context['call_id'])
 
     def __init__(self):
-        submod = get_service_name() or 'test_taxon_api'
+        submod = get_service_name() or 'TestTaxonAPI'
         self.userlog = log.log(
             submod, ip_address=True, authuser=True, module=True, method=True,
             call_id=True, changecallback=self.logcallback,
@@ -380,72 +380,72 @@ class Application(object):
         self.serverlog.set_log_level(6)
         self.rpc_service = JSONRPCServiceCustom()
         self.method_authentication = dict()
-        self.rpc_service.add(impl_test_taxon_api.get_parent,
-                             name='test_taxon_api.get_parent',
+        self.rpc_service.add(impl_TestTaxonAPI.get_parent,
+                             name='TestTaxonAPI.get_parent',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_parent'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_children,
-                             name='test_taxon_api.get_children',
+        self.method_authentication['TestTaxonAPI.get_parent'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_children,
+                             name='TestTaxonAPI.get_children',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_children'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_genome_annotations,
-                             name='test_taxon_api.get_genome_annotations',
+        self.method_authentication['TestTaxonAPI.get_children'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_genome_annotations,
+                             name='TestTaxonAPI.get_genome_annotations',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_genome_annotations'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_scientific_lineage,
-                             name='test_taxon_api.get_scientific_lineage',
+        self.method_authentication['TestTaxonAPI.get_genome_annotations'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_scientific_lineage,
+                             name='TestTaxonAPI.get_scientific_lineage',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_scientific_lineage'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_scientific_name,
-                             name='test_taxon_api.get_scientific_name',
+        self.method_authentication['TestTaxonAPI.get_scientific_lineage'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_scientific_name,
+                             name='TestTaxonAPI.get_scientific_name',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_scientific_name'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_taxonomic_id,
-                             name='test_taxon_api.get_taxonomic_id',
+        self.method_authentication['TestTaxonAPI.get_scientific_name'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_taxonomic_id,
+                             name='TestTaxonAPI.get_taxonomic_id',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_taxonomic_id'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_kingdom,
-                             name='test_taxon_api.get_kingdom',
+        self.method_authentication['TestTaxonAPI.get_taxonomic_id'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_kingdom,
+                             name='TestTaxonAPI.get_kingdom',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_kingdom'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_domain,
-                             name='test_taxon_api.get_domain',
+        self.method_authentication['TestTaxonAPI.get_kingdom'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_domain,
+                             name='TestTaxonAPI.get_domain',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_domain'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_genetic_code,
-                             name='test_taxon_api.get_genetic_code',
+        self.method_authentication['TestTaxonAPI.get_domain'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_genetic_code,
+                             name='TestTaxonAPI.get_genetic_code',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_genetic_code'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_aliases,
-                             name='test_taxon_api.get_aliases',
+        self.method_authentication['TestTaxonAPI.get_genetic_code'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_aliases,
+                             name='TestTaxonAPI.get_aliases',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_aliases'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_info,
-                             name='test_taxon_api.get_info',
+        self.method_authentication['TestTaxonAPI.get_aliases'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_info,
+                             name='TestTaxonAPI.get_info',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_info'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_history,
-                             name='test_taxon_api.get_history',
+        self.method_authentication['TestTaxonAPI.get_info'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_history,
+                             name='TestTaxonAPI.get_history',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_history'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_provenance,
-                             name='test_taxon_api.get_provenance',
+        self.method_authentication['TestTaxonAPI.get_history'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_provenance,
+                             name='TestTaxonAPI.get_provenance',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_provenance'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_id,
-                             name='test_taxon_api.get_id',
+        self.method_authentication['TestTaxonAPI.get_provenance'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_id,
+                             name='TestTaxonAPI.get_id',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_id'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_name,
-                             name='test_taxon_api.get_name',
+        self.method_authentication['TestTaxonAPI.get_id'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_name,
+                             name='TestTaxonAPI.get_name',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_name'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.get_version,
-                             name='test_taxon_api.get_version',
+        self.method_authentication['TestTaxonAPI.get_name'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.get_version,
+                             name='TestTaxonAPI.get_version',
                              types=[basestring])
-        self.method_authentication['test_taxon_api.get_version'] = 'required'
-        self.rpc_service.add(impl_test_taxon_api.status,
-                             name='test_taxon_api.status',
+        self.method_authentication['TestTaxonAPI.get_version'] = 'required'
+        self.rpc_service.add(impl_TestTaxonAPI.status,
+                             name='TestTaxonAPI.status',
                              types=[dict])
         self.auth_client = biokbase.nexus.Client(
             config={'server': 'nexus.api.globusonline.org',
@@ -500,7 +500,7 @@ class Application(object):
                         if token is None and auth_req == 'required':
                             err = ServerError()
                             err.data = "Authentication required for " + \
-                                "test_taxon_api but no authentication header was passed"
+                                "TestTaxonAPI but no authentication header was passed"
                             raise err
                         elif token is None and auth_req == 'optional':
                             pass

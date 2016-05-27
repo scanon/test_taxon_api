@@ -13,19 +13,19 @@ import us.kbase.common.service.RpcContext;
 import us.kbase.common.service.UnauthorizedException;
 
 /**
- * <p>Original spec-file module name: test_taxon_api</p>
+ * <p>Original spec-file module name: TestTaxonAPI</p>
  * <pre>
  * A KBase module: test_taxon_api
  * </pre>
  */
-public class TestTaxonApiClient {
+public class TestTaxonAPIClient {
     private JsonClientCaller caller;
 
 
     /** Constructs a client with a custom URL and no user credentials.
      * @param url the URL of the service.
      */
-    public TestTaxonApiClient(URL url) {
+    public TestTaxonAPIClient(URL url) {
         caller = new JsonClientCaller(url);
     }
     /** Constructs a client with a custom URL.
@@ -35,7 +35,7 @@ public class TestTaxonApiClient {
      * @throws IOException if an IOException occurs when checking the token's
      * validity.
      */
-    public TestTaxonApiClient(URL url, AuthToken token) throws UnauthorizedException, IOException {
+    public TestTaxonAPIClient(URL url, AuthToken token) throws UnauthorizedException, IOException {
         caller = new JsonClientCaller(url, token);
     }
 
@@ -47,7 +47,7 @@ public class TestTaxonApiClient {
      * @throws IOException if an IOException occurs when checking the user's
      * credentials.
      */
-    public TestTaxonApiClient(URL url, String user, String password) throws UnauthorizedException, IOException {
+    public TestTaxonAPIClient(URL url, String user, String password) throws UnauthorizedException, IOException {
         caller = new JsonClientCaller(url, user, password);
     }
 
@@ -155,7 +155,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<String>> retType = new TypeReference<List<String>>() {};
-        List<String> res = caller.jsonrpcCall("test_taxon_api.get_parent", args, retType, true, true, jsonRpcContext);
+        List<String> res = caller.jsonrpcCall("TestTaxonAPI.get_parent", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -176,7 +176,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<List<String>>> retType = new TypeReference<List<List<String>>>() {};
-        List<List<String>> res = caller.jsonrpcCall("test_taxon_api.get_children", args, retType, true, true, jsonRpcContext);
+        List<List<String>> res = caller.jsonrpcCall("TestTaxonAPI.get_children", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -199,7 +199,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<List<String>>> retType = new TypeReference<List<List<String>>>() {};
-        List<List<String>> res = caller.jsonrpcCall("test_taxon_api.get_genome_annotations", args, retType, true, true, jsonRpcContext);
+        List<List<String>> res = caller.jsonrpcCall("TestTaxonAPI.get_genome_annotations", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -222,7 +222,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<List<String>>> retType = new TypeReference<List<List<String>>>() {};
-        List<List<String>> res = caller.jsonrpcCall("test_taxon_api.get_scientific_lineage", args, retType, true, true, jsonRpcContext);
+        List<List<String>> res = caller.jsonrpcCall("TestTaxonAPI.get_scientific_lineage", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -243,7 +243,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<String>> retType = new TypeReference<List<String>>() {};
-        List<String> res = caller.jsonrpcCall("test_taxon_api.get_scientific_name", args, retType, true, true, jsonRpcContext);
+        List<String> res = caller.jsonrpcCall("TestTaxonAPI.get_scientific_name", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -265,7 +265,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<Long>> retType = new TypeReference<List<Long>>() {};
-        List<Long> res = caller.jsonrpcCall("test_taxon_api.get_taxonomic_id", args, retType, true, true, jsonRpcContext);
+        List<Long> res = caller.jsonrpcCall("TestTaxonAPI.get_taxonomic_id", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -285,7 +285,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<String>> retType = new TypeReference<List<String>>() {};
-        List<String> res = caller.jsonrpcCall("test_taxon_api.get_kingdom", args, retType, true, true, jsonRpcContext);
+        List<String> res = caller.jsonrpcCall("TestTaxonAPI.get_kingdom", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -305,7 +305,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<String>> retType = new TypeReference<List<String>>() {};
-        List<String> res = caller.jsonrpcCall("test_taxon_api.get_domain", args, retType, true, true, jsonRpcContext);
+        List<String> res = caller.jsonrpcCall("TestTaxonAPI.get_domain", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -325,7 +325,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<Long>> retType = new TypeReference<List<Long>>() {};
-        List<Long> res = caller.jsonrpcCall("test_taxon_api.get_genetic_code", args, retType, true, true, jsonRpcContext);
+        List<Long> res = caller.jsonrpcCall("TestTaxonAPI.get_genetic_code", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -345,7 +345,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<List<String>>> retType = new TypeReference<List<List<String>>>() {};
-        List<List<String>> res = caller.jsonrpcCall("test_taxon_api.get_aliases", args, retType, true, true, jsonRpcContext);
+        List<List<String>> res = caller.jsonrpcCall("TestTaxonAPI.get_aliases", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -365,7 +365,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<ObjectInfo>> retType = new TypeReference<List<ObjectInfo>>() {};
-        List<ObjectInfo> res = caller.jsonrpcCall("test_taxon_api.get_info", args, retType, true, true, jsonRpcContext);
+        List<ObjectInfo> res = caller.jsonrpcCall("TestTaxonAPI.get_info", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -385,7 +385,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<List<ObjectInfo>>> retType = new TypeReference<List<List<ObjectInfo>>>() {};
-        List<List<ObjectInfo>> res = caller.jsonrpcCall("test_taxon_api.get_history", args, retType, true, true, jsonRpcContext);
+        List<List<ObjectInfo>> res = caller.jsonrpcCall("TestTaxonAPI.get_history", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -405,7 +405,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<List<ObjectProvenanceAction>>> retType = new TypeReference<List<List<ObjectProvenanceAction>>>() {};
-        List<List<ObjectProvenanceAction>> res = caller.jsonrpcCall("test_taxon_api.get_provenance", args, retType, true, true, jsonRpcContext);
+        List<List<ObjectProvenanceAction>> res = caller.jsonrpcCall("TestTaxonAPI.get_provenance", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -425,7 +425,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<Long>> retType = new TypeReference<List<Long>>() {};
-        List<Long> res = caller.jsonrpcCall("test_taxon_api.get_id", args, retType, true, true, jsonRpcContext);
+        List<Long> res = caller.jsonrpcCall("TestTaxonAPI.get_id", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -445,7 +445,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<String>> retType = new TypeReference<List<String>>() {};
-        List<String> res = caller.jsonrpcCall("test_taxon_api.get_name", args, retType, true, true, jsonRpcContext);
+        List<String> res = caller.jsonrpcCall("TestTaxonAPI.get_name", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 
@@ -465,7 +465,7 @@ public class TestTaxonApiClient {
         List<Object> args = new ArrayList<Object>();
         args.add(ref);
         TypeReference<List<String>> retType = new TypeReference<List<String>>() {};
-        List<String> res = caller.jsonrpcCall("test_taxon_api.get_version", args, retType, true, true, jsonRpcContext);
+        List<String> res = caller.jsonrpcCall("TestTaxonAPI.get_version", args, retType, true, true, jsonRpcContext);
         return res.get(0);
     }
 }

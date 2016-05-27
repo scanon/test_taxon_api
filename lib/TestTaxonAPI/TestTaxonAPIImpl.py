@@ -6,10 +6,10 @@ import logging
 #END_HEADER
 
 
-class test_taxon_api:
+class TestTaxonAPI:
     '''
     Module Name:
-    test_taxon_api
+    TestTaxonAPI
 
     Module Description:
     A KBase module: test_taxon_api
@@ -22,8 +22,8 @@ class test_taxon_api:
     # the latter method is running.
     #########################################
     VERSION = "0.0.1"
-    GIT_URL = ""
-    GIT_COMMIT_HASH = ""
+    GIT_URL = "https://github.com/scanon/testtaxonapi"
+    GIT_COMMIT_HASH = "a76b28a7e461132eb5227a7465dc8c37fb01b839"
     
     #BEGIN_CLASS_HEADER
     #END_CLASS_HEADER

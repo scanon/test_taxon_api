@@ -8,8 +8,8 @@ from ConfigParser import ConfigParser
 from pprint import pprint
 
 from biokbase.workspace.client import Workspace as workspaceService
-from test_taxon_api.test_taxon_apiImpl import test_taxon_api
-from test_taxon_api.test_taxon_apiServer import MethodContext
+from TestTaxonAPI.TestTaxonAPIImpl import TestTaxonAPI
+from TestTaxonAPI.TestTaxonAPIServer import MethodContext
 
 
 class test_taxon_apiTest(unittest.TestCase):
@@ -31,11 +31,11 @@ class test_taxon_apiTest(unittest.TestCase):
         cls.cfg = {}
         config = ConfigParser()
         config.read(config_file)
-        for nameval in config.items('test_taxon_api'):
+        for nameval in config.items('TestTaxonAPI'):
             cls.cfg[nameval[0]] = nameval[1]
         cls.wsURL = cls.cfg['workspace-url']
         cls.wsClient = workspaceService(cls.wsURL, token=token)
-        cls.serviceImpl = test_taxon_api(cls.cfg)
+        cls.serviceImpl = TestTaxonAPI(cls.cfg)
         cls.taxon='1779/523209/1'
         cls.parent=u'1779/178590/1'
 
@@ -52,7 +52,7 @@ class test_taxon_apiTest(unittest.TestCase):
         if hasattr(self.__class__, 'wsName'):
             return self.__class__.wsName
         suffix = int(time.time() * 1000)
-        wsName = "test_taxon_api_" + str(suffix)
+        wsName = "testtaxonapi_" + str(suffix)
         ret = self.getWsClient().create_workspace({'workspace': wsName})
         self.__class__.wsName = wsName
         return wsName

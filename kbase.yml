@@ -1,5 +1,5 @@
 module-name:
-    test_taxon_api
+    TestTaxonAPI
 
 module-description:
     A KBase module

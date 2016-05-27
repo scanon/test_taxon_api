@@ -2,7 +2,7 @@
 A KBase module: test_taxon_api
 */
 
-module test_taxon_api {
+module TestTaxonAPI {
     /*
         Insert your typespec information here.
     */

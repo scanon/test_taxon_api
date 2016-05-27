@@ -1,7 +1,7 @@
-SERVICE = test_taxon_api
-SERVICE_CAPS = test_taxon_api
-SPEC_FILE = test_taxon_api.spec
-URL = https://kbase.us/services/test_taxon_api
+SERVICE = testtaxonapi
+SERVICE_CAPS = TestTaxonAPI
+SPEC_FILE = TestTaxonAPI.spec
+URL = https://kbase.us/services/testtaxonapi
 DIR = $(shell pwd)
 LIB_DIR = lib
 SCRIPTS_DIR = scripts

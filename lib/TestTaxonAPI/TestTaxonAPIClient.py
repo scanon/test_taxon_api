@@ -103,7 +103,7 @@ class _JSONObjectEncoder(_json.JSONEncoder):
         return _json.JSONEncoder.default(self, obj)
 
 
-class test_taxon_api(object):
+class TestTaxonAPI(object):
 
     def __init__(self, url=None, timeout=30 * 60, user_id=None,
                  password=None, token=None, ignore_authrc=False,
@@ -174,112 +174,112 @@ class test_taxon_api(object):
     def get_parent(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_parent: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_parent',
+        resp = self._call('TestTaxonAPI.get_parent',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_children(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_children: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_children',
+        resp = self._call('TestTaxonAPI.get_children',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_genome_annotations(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_genome_annotations: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_genome_annotations',
+        resp = self._call('TestTaxonAPI.get_genome_annotations',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_scientific_lineage(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_scientific_lineage: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_scientific_lineage',
+        resp = self._call('TestTaxonAPI.get_scientific_lineage',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_scientific_name(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_scientific_name: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_scientific_name',
+        resp = self._call('TestTaxonAPI.get_scientific_name',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_taxonomic_id(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_taxonomic_id: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_taxonomic_id',
+        resp = self._call('TestTaxonAPI.get_taxonomic_id',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_kingdom(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_kingdom: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_kingdom',
+        resp = self._call('TestTaxonAPI.get_kingdom',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_domain(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_domain: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_domain',
+        resp = self._call('TestTaxonAPI.get_domain',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_genetic_code(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_genetic_code: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_genetic_code',
+        resp = self._call('TestTaxonAPI.get_genetic_code',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_aliases(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_aliases: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_aliases',
+        resp = self._call('TestTaxonAPI.get_aliases',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_info(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_info: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_info',
+        resp = self._call('TestTaxonAPI.get_info',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_history(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_history: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_history',
+        resp = self._call('TestTaxonAPI.get_history',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_provenance(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_provenance: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_provenance',
+        resp = self._call('TestTaxonAPI.get_provenance',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_id(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_id: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_id',
+        resp = self._call('TestTaxonAPI.get_id',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_name(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_name: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_name',
+        resp = self._call('TestTaxonAPI.get_name',
                           [ref], json_rpc_context)
         return resp[0]
   
     def get_version(self, ref, json_rpc_context = None):
         if json_rpc_context and type(json_rpc_context) is not dict:
             raise ValueError('Method get_version: argument json_rpc_context is not type dict as required.')
-        resp = self._call('test_taxon_api.get_version',
+        resp = self._call('TestTaxonAPI.get_version',
                           [ref], json_rpc_context)
         return resp[0]
  

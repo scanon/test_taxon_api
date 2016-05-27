@@ -1,4 +1,4 @@
-package test_taxon_api::test_taxon_apiClient;
+package TestTaxonAPI::TestTaxonAPIClient;
 
 use JSON::RPC::Client;
 use POSIX;
@@ -21,7 +21,7 @@ our $VERSION = "0.1.0";
 
 =head1 NAME
 
-test_taxon_api::test_taxon_apiClient
+TestTaxonAPI::TestTaxonAPIClient
 
 =head1 DESCRIPTION
 
@@ -37,7 +37,7 @@ sub new
     
 
     my $self = {
-	client => test_taxon_api::test_taxon_apiClient::RpcClient->new,
+	client => TestTaxonAPI::TestTaxonAPIClient::RpcClient->new,
 	url => $url,
 	headers => [],
     };
@@ -120,8 +120,8 @@ sub new
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
-$return is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
+$return is a TestTaxonAPI.ObjectReference
 ObjectReference is a string
 
 </pre>
@@ -130,8 +130,8 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
-$return is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
+$return is a TestTaxonAPI.ObjectReference
 ObjectReference is a string
 
 
@@ -171,7 +171,7 @@ Retrieve parent Taxon.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_parent",
+	method => "TestTaxonAPI.get_parent",
 	params => \@args,
     });
     if ($result) {
@@ -205,8 +205,8 @@ Retrieve parent Taxon.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
-$return is a reference to a list where each element is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
+$return is a reference to a list where each element is a TestTaxonAPI.ObjectReference
 ObjectReference is a string
 
 </pre>
@@ -215,8 +215,8 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
-$return is a reference to a list where each element is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
+$return is a reference to a list where each element is a TestTaxonAPI.ObjectReference
 ObjectReference is a string
 
 
@@ -256,7 +256,7 @@ Retrieve children Taxon.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_children",
+	method => "TestTaxonAPI.get_children",
 	params => \@args,
     });
     if ($result) {
@@ -290,8 +290,8 @@ Retrieve children Taxon.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
-$return is a reference to a list where each element is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
+$return is a reference to a list where each element is a TestTaxonAPI.ObjectReference
 ObjectReference is a string
 
 </pre>
@@ -300,8 +300,8 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
-$return is a reference to a list where each element is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
+$return is a reference to a list where each element is a TestTaxonAPI.ObjectReference
 ObjectReference is a string
 
 
@@ -343,7 +343,7 @@ funcdef GenomeAnnotation(s) that refer to this Taxon.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_genome_annotations",
+	method => "TestTaxonAPI.get_genome_annotations",
 	params => \@args,
     });
     if ($result) {
@@ -377,7 +377,7 @@ funcdef GenomeAnnotation(s) that refer to this Taxon.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a reference to a list where each element is a string
 ObjectReference is a string
 
@@ -387,7 +387,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a reference to a list where each element is a string
 ObjectReference is a string
 
@@ -429,7 +429,7 @@ Retrieve the scientific lineage.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_scientific_lineage",
+	method => "TestTaxonAPI.get_scientific_lineage",
 	params => \@args,
     });
     if ($result) {
@@ -463,7 +463,7 @@ Retrieve the scientific lineage.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -473,7 +473,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -514,7 +514,7 @@ Retrieve the scientific name.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_scientific_name",
+	method => "TestTaxonAPI.get_scientific_name",
 	params => \@args,
     });
     if ($result) {
@@ -548,7 +548,7 @@ Retrieve the scientific name.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is an int
 ObjectReference is a string
 
@@ -558,7 +558,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is an int
 ObjectReference is a string
 
@@ -600,7 +600,7 @@ For type KBaseGenomes.Genome, the ``source_id`` will be returned.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_taxonomic_id",
+	method => "TestTaxonAPI.get_taxonomic_id",
 	params => \@args,
     });
     if ($result) {
@@ -634,7 +634,7 @@ For type KBaseGenomes.Genome, the ``source_id`` will be returned.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -644,7 +644,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -683,7 +683,7 @@ Retrieve the kingdom.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_kingdom",
+	method => "TestTaxonAPI.get_kingdom",
 	params => \@args,
     });
     if ($result) {
@@ -717,7 +717,7 @@ Retrieve the kingdom.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -727,7 +727,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -766,7 +766,7 @@ Retrieve the domain.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_domain",
+	method => "TestTaxonAPI.get_domain",
 	params => \@args,
     });
     if ($result) {
@@ -800,7 +800,7 @@ Retrieve the domain.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is an int
 ObjectReference is a string
 
@@ -810,7 +810,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is an int
 ObjectReference is a string
 
@@ -849,7 +849,7 @@ Retrieve the genetic code.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_genetic_code",
+	method => "TestTaxonAPI.get_genetic_code",
 	params => \@args,
     });
     if ($result) {
@@ -883,7 +883,7 @@ Retrieve the genetic code.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a reference to a list where each element is a string
 ObjectReference is a string
 
@@ -893,7 +893,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a reference to a list where each element is a string
 ObjectReference is a string
 
@@ -932,7 +932,7 @@ Retrieve the aliases.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_aliases",
+	method => "TestTaxonAPI.get_aliases",
 	params => \@args,
     });
     if ($result) {
@@ -966,8 +966,8 @@ Retrieve the aliases.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
-$return is a test_taxon_api.ObjectInfo
+$ref is a TestTaxonAPI.ObjectReference
+$return is a TestTaxonAPI.ObjectInfo
 ObjectReference is a string
 ObjectInfo is a reference to a hash where the following keys are defined:
 	object_id has a value which is an int
@@ -990,8 +990,8 @@ ObjectInfo is a reference to a hash where the following keys are defined:
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
-$return is a test_taxon_api.ObjectInfo
+$ref is a TestTaxonAPI.ObjectReference
+$return is a TestTaxonAPI.ObjectInfo
 ObjectReference is a string
 ObjectInfo is a reference to a hash where the following keys are defined:
 	object_id has a value which is an int
@@ -1044,7 +1044,7 @@ Retrieve object info.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_info",
+	method => "TestTaxonAPI.get_info",
 	params => \@args,
     });
     if ($result) {
@@ -1078,10 +1078,10 @@ Retrieve object info.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
-$return is a test_taxon_api.ObjectHistory
+$ref is a TestTaxonAPI.ObjectReference
+$return is a TestTaxonAPI.ObjectHistory
 ObjectReference is a string
-ObjectHistory is a reference to a list where each element is a test_taxon_api.ObjectInfo
+ObjectHistory is a reference to a list where each element is a TestTaxonAPI.ObjectInfo
 ObjectInfo is a reference to a hash where the following keys are defined:
 	object_id has a value which is an int
 	object_name has a value which is a string
@@ -1103,10 +1103,10 @@ ObjectInfo is a reference to a hash where the following keys are defined:
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
-$return is a test_taxon_api.ObjectHistory
+$ref is a TestTaxonAPI.ObjectReference
+$return is a TestTaxonAPI.ObjectHistory
 ObjectReference is a string
-ObjectHistory is a reference to a list where each element is a test_taxon_api.ObjectInfo
+ObjectHistory is a reference to a list where each element is a TestTaxonAPI.ObjectInfo
 ObjectInfo is a reference to a hash where the following keys are defined:
 	object_id has a value which is an int
 	object_name has a value which is a string
@@ -1158,7 +1158,7 @@ Retrieve object history.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_history",
+	method => "TestTaxonAPI.get_history",
 	params => \@args,
     });
     if ($result) {
@@ -1192,10 +1192,10 @@ Retrieve object history.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
-$return is a test_taxon_api.ObjectProvenance
+$ref is a TestTaxonAPI.ObjectReference
+$return is a TestTaxonAPI.ObjectProvenance
 ObjectReference is a string
-ObjectProvenance is a reference to a list where each element is a test_taxon_api.ObjectProvenanceAction
+ObjectProvenance is a reference to a list where each element is a TestTaxonAPI.ObjectProvenanceAction
 ObjectProvenanceAction is a reference to a hash where the following keys are defined:
 	time has a value which is a string
 	service_name has a value which is a string
@@ -1209,7 +1209,7 @@ ObjectProvenanceAction is a reference to a hash where the following keys are def
 	validated_object_references has a value which is a reference to a list where each element is a string
 	intermediate_input_ids has a value which is a reference to a list where each element is a string
 	intermediate_output_ids has a value which is a reference to a list where each element is a string
-	external_data has a value which is a reference to a list where each element is a test_taxon_api.ExternalDataUnit
+	external_data has a value which is a reference to a list where each element is a TestTaxonAPI.ExternalDataUnit
 	description has a value which is a string
 ExternalDataUnit is a reference to a hash where the following keys are defined:
 	resource_name has a value which is a string
@@ -1226,10 +1226,10 @@ ExternalDataUnit is a reference to a hash where the following keys are defined:
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
-$return is a test_taxon_api.ObjectProvenance
+$ref is a TestTaxonAPI.ObjectReference
+$return is a TestTaxonAPI.ObjectProvenance
 ObjectReference is a string
-ObjectProvenance is a reference to a list where each element is a test_taxon_api.ObjectProvenanceAction
+ObjectProvenance is a reference to a list where each element is a TestTaxonAPI.ObjectProvenanceAction
 ObjectProvenanceAction is a reference to a hash where the following keys are defined:
 	time has a value which is a string
 	service_name has a value which is a string
@@ -1243,7 +1243,7 @@ ObjectProvenanceAction is a reference to a hash where the following keys are def
 	validated_object_references has a value which is a reference to a list where each element is a string
 	intermediate_input_ids has a value which is a reference to a list where each element is a string
 	intermediate_output_ids has a value which is a reference to a list where each element is a string
-	external_data has a value which is a reference to a list where each element is a test_taxon_api.ExternalDataUnit
+	external_data has a value which is a reference to a list where each element is a TestTaxonAPI.ExternalDataUnit
 	description has a value which is a string
 ExternalDataUnit is a reference to a hash where the following keys are defined:
 	resource_name has a value which is a string
@@ -1290,7 +1290,7 @@ Retrieve object provenance.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_provenance",
+	method => "TestTaxonAPI.get_provenance",
 	params => \@args,
     });
     if ($result) {
@@ -1324,7 +1324,7 @@ Retrieve object provenance.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is an int
 ObjectReference is a string
 
@@ -1334,7 +1334,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is an int
 ObjectReference is a string
 
@@ -1374,7 +1374,7 @@ Retrieve object identifier.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_id",
+	method => "TestTaxonAPI.get_id",
 	params => \@args,
     });
     if ($result) {
@@ -1408,7 +1408,7 @@ Retrieve object identifier.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -1418,7 +1418,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -1458,7 +1458,7 @@ Retrieve object name.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_name",
+	method => "TestTaxonAPI.get_name",
 	params => \@args,
     });
     if ($result) {
@@ -1492,7 +1492,7 @@ Retrieve object name.
 =begin html
 
 <pre>
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -1502,7 +1502,7 @@ ObjectReference is a string
 
 =begin text
 
-$ref is a test_taxon_api.ObjectReference
+$ref is a TestTaxonAPI.ObjectReference
 $return is a string
 ObjectReference is a string
 
@@ -1542,7 +1542,7 @@ Retrieve object version.
     }
 
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-	method => "test_taxon_api.get_version",
+	method => "TestTaxonAPI.get_version",
 	params => \@args,
     });
     if ($result) {
@@ -1568,7 +1568,7 @@ Retrieve object version.
 sub version {
     my ($self) = @_;
     my $result = $self->{client}->call($self->{url}, $self->{headers}, {
-        method => "test_taxon_api.version",
+        method => "TestTaxonAPI.version",
         params => [],
     });
     if ($result) {
@@ -1611,10 +1611,10 @@ sub _validate_version {
         );
     }
     if ($sMinor > $cMinor) {
-        warn "New client version available for test_taxon_api::test_taxon_apiClient\n";
+        warn "New client version available for TestTaxonAPI::TestTaxonAPIClient\n";
     }
     if ($sMajor == 0) {
-        warn "test_taxon_api::test_taxon_apiClient version is $svr_version. API subject to change.\n";
+        warn "TestTaxonAPI::TestTaxonAPIClient version is $svr_version. API subject to change.\n";
     }
 }
 
@@ -1728,14 +1728,14 @@ object_metadata has a value which is a reference to a hash where the key is a st
 =begin html
 
 <pre>
-a reference to a list where each element is a test_taxon_api.ObjectInfo
+a reference to a list where each element is a TestTaxonAPI.ObjectInfo
 </pre>
 
 =end html
 
 =begin text
 
-a reference to a list where each element is a test_taxon_api.ObjectInfo
+a reference to a list where each element is a TestTaxonAPI.ObjectInfo
 
 =end text
 
@@ -1819,7 +1819,7 @@ input_object_references has a value which is a reference to a list where each el
 validated_object_references has a value which is a reference to a list where each element is a string
 intermediate_input_ids has a value which is a reference to a list where each element is a string
 intermediate_output_ids has a value which is a reference to a list where each element is a string
-external_data has a value which is a reference to a list where each element is a test_taxon_api.ExternalDataUnit
+external_data has a value which is a reference to a list where each element is a TestTaxonAPI.ExternalDataUnit
 description has a value which is a string
 
 </pre>
@@ -1841,7 +1841,7 @@ input_object_references has a value which is a reference to a list where each el
 validated_object_references has a value which is a reference to a list where each element is a string
 intermediate_input_ids has a value which is a reference to a list where each element is a string
 intermediate_output_ids has a value which is a reference to a list where each element is a string
-external_data has a value which is a reference to a list where each element is a test_taxon_api.ExternalDataUnit
+external_data has a value which is a reference to a list where each element is a TestTaxonAPI.ExternalDataUnit
 description has a value which is a string
 
 
@@ -1867,14 +1867,14 @@ description has a value which is a string
 =begin html
 
 <pre>
-a reference to a list where each element is a test_taxon_api.ObjectProvenanceAction
+a reference to a list where each element is a TestTaxonAPI.ObjectProvenanceAction
 </pre>
 
 =end html
 
 =begin text
 
-a reference to a list where each element is a test_taxon_api.ObjectProvenanceAction
+a reference to a list where each element is a TestTaxonAPI.ObjectProvenanceAction
 
 =end text
 
@@ -1884,7 +1884,7 @@ a reference to a list where each element is a test_taxon_api.ObjectProvenanceAct
 
 =cut
 
-package test_taxon_api::test_taxon_apiClient::RpcClient;
+package TestTaxonAPI::TestTaxonAPIClient::RpcClient;
 use base 'JSON::RPC::Client';
 use POSIX;
 use strict;
